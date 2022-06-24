@@ -6,7 +6,7 @@
 
 **Requirements:** netcat, nmap
 
-## Port Scan with netcat
+## Port scan with netcat
 
 ```sh
 # flags we are using
@@ -19,7 +19,7 @@
 nc -v -n -r -z -w1 192.168.1.100 1-65535
 ```
 
-## Port Scan using TCP Sockets
+## Port scan using TCP Sockets
 
 ```sh
 for port in {1..65535}; do 2>/dev/null > echo >/dev/tcp/192.168.1.100/$port && echo "[*] Port $port is open"; done
